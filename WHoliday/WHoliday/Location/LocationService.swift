@@ -5,7 +5,7 @@
 //  Created by Furkan Hanci on 7/3/21.
 //
 
-import Foundation
+
 import CoreLocation
 
 class LocationManager : NSObject {

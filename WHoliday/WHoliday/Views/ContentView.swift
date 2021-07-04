@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let locationManager = LocationManager()
     var body: some View {
         ZStack {
             
-            
-        }.onAppear {
-            print("Curreny country is \(LocationManager.shared.getCountryInfo())")
-            
-            
+            LinearGradient(gradient: Gradient(colors: [Color.bg1 , Color.bg2]), startPoint: .bottomLeading, endPoint: .topTrailing).edgesIgnoringSafeArea(.all)
+            ZStack {
+                
+            }
         }
     }
 }
