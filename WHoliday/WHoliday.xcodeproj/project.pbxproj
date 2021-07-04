@@ -17,6 +17,9 @@
 		70D00D222691C1610094FDB3 /* HolidayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D00D212691C1610094FDB3 /* HolidayError.swift */; };
 		70D00D252691C2400094FDB3 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D00D242691C2400094FDB3 /* ServiceProtocol.swift */; };
 		70D00D282691C2570094FDB3 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D00D272691C2570094FDB3 /* Holiday.swift */; };
+		70D00D2B2691C4860094FDB3 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D00D2A2691C4860094FDB3 /* ServiceClient.swift */; };
+		70D00D2F2691C51B0094FDB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D00D2E2691C51B0094FDB3 /* Constants.swift */; };
+		70D00D312691CC3C0094FDB3 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D00D302691CC3C0094FDB3 /* HTTPStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		70D00D212691C1610094FDB3 /* HolidayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayError.swift; sourceTree = "<group>"; };
 		70D00D242691C2400094FDB3 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		70D00D272691C2570094FDB3 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		70D00D2A2691C4860094FDB3 /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		70D00D2E2691C51B0094FDB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70D00D302691CC3C0094FDB3 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		70950B04269065EB007106D6 /* WHoliday */ = {
 			isa = PBXGroup;
 			children = (
+				70D00D2D2691C5110094FDB3 /* Support */,
 				70D00D232691C2270094FDB3 /* Protocols */,
 				70D00D1C2691BFD30094FDB3 /* Network */,
 				70950B14269065FD007106D6 /* Application */,
@@ -120,6 +127,7 @@
 		70D00D1C2691BFD30094FDB3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				70D00D292691C4700094FDB3 /* Request */,
 				70D00D262691C24B0094FDB3 /* Model */,
 				70D00D202691C1530094FDB3 /* Error */,
 				70D00D1D2691BFDE0094FDB3 /* HTTP */,
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				70D00D1E2691BFEF0094FDB3 /* HttpMethod.swift */,
+				70D00D302691CC3C0094FDB3 /* HTTPStatus.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -157,6 +166,22 @@
 				70D00D272691C2570094FDB3 /* Holiday.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		70D00D292691C4700094FDB3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				70D00D2A2691C4860094FDB3 /* ServiceClient.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		70D00D2D2691C5110094FDB3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				70D00D2E2691C51B0094FDB3 /* Constants.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +258,11 @@
 				70D00D282691C2570094FDB3 /* Holiday.swift in Sources */,
 				70D00D1F2691BFEF0094FDB3 /* HttpMethod.swift in Sources */,
 				70950B18269068D8007106D6 /* LocationService.swift in Sources */,
+				70D00D312691CC3C0094FDB3 /* HTTPStatus.swift in Sources */,
+				70D00D2F2691C51B0094FDB3 /* Constants.swift in Sources */,
 				70950B06269065EB007106D6 /* WHolidayApp.swift in Sources */,
 				70D00D252691C2400094FDB3 /* ServiceProtocol.swift in Sources */,
+				70D00D2B2691C4860094FDB3 /* ServiceClient.swift in Sources */,
 				70D00D222691C1610094FDB3 /* HolidayError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
