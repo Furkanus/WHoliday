@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol ServiceClientProtocol {
-    func getData(countryCode : String?  , year : String? ,completion : @escaping (Result< [Holiday] , HolidayError >) -> Void)
+    func getData(year : String?  , countryCode : String? ,completion : @escaping (Result< [Holiday] , HolidayError >) -> Void)
 }

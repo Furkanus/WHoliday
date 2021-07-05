@@ -8,10 +8,10 @@
 
 import CoreLocation
 
-class LocationManager : NSObject {
+class LocationManager  {
     static let shared = LocationManager()
     
-    override init() {
+    init() {
         
     }
     

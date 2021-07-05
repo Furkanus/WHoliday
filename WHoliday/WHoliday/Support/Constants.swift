@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
     struct Network {
-        static let baseUrl = "https://date.nager.at/api/v3/PublicHolidays"
+        static let baseUrl = "https://date.nager.at/api/v3/publicholidays/"
     }
+
 }

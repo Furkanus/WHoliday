@@ -6,61 +6,52 @@
 //
 
 import Foundation
+import Combine
 
-final class ServiceClient : ServiceClientProtocol {
+final class ServiceClient : ServiceClientProtocol , ObservableObject {
     
     @Published private var holidays : [Holiday] = []
     
-    func getData(countryCode: String? , year: String?, completion: @escaping (Result<[Holiday], HolidayError>) -> Void) {
+    func getData(year : String? , countryCode : String?, completion: @escaping (Result<([Holiday]), HolidayError>) -> Void) {
         
-        guard let url = URL(string: "\(Constants.Network.baseUrl)\(countryCode ?? "TR")\(year ?? "2021")") else {
+        guard let url = URL(string: "\(Constants.Network.baseUrl)\(year ?? "2021")/\(countryCode ?? "TR")") else {
             completion(.failure(.urlError))
             return
         }
         
+        print(url)
+        
         let session = URLSession(configuration: .default)
         
-        session.dataTask(with: url) { [weak self] data, response, err in
-            guard err == nil else {
+        session.dataTask(with: url) { data, response, err in
+            guard err == nil, let data = data else {
                 completion(.failure(.genericError))
                 return
             }
             
-            guard let response = response as? HTTPURLResponse else {
-                completion(.failure(.genericError))
-                return
-            }
-            
-            guard response.statusCode == HTTPStatus.succses.rawValue else {
-                completion(.failure(.responseError))
-                return
-            }
-            
+//            guard let response = response as? HTTPURLResponse else {
+//                if let httpResponse = response as? HTTPURLResponse {
+//                      print("statusCode: \(httpResponse.statusCode)")
+//                  }
+//
+//                return
+//            }
+//
 //            guard response.statusCode == HTTPStatus.failure.rawValue else {
 //                completion(.failure(.responseError))
 //                return
 //            }
             
-            switch response.statusCode == 404 {
-            case .BooleanLiteralType(true):
-                completion(.failure(.responseError))
-                
-            default:
-                break;
-             
-            }
-            
-            
-            guard let datas = data else {
-                completion(.failure(.dataError))
-                return
-            }
             
             do {
-                let dat = try JSONDecoder().decode([Holiday].self, from: datas)
-
+                let datas = try JSONDecoder().decode([Holiday].self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(datas))
+                    
+                }
+                
             } catch {
-                completion(.failure(.genericError))
+                completion(.failure(.decodingError))
             }
         }
         
