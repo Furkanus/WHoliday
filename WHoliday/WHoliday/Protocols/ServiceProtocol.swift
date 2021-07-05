@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CoreLocation
 
 protocol ServiceClientProtocol {
     func getData(year : String?  , countryCode : String? ,completion : @escaping (Result< [Holiday] , HolidayError >) -> Void)

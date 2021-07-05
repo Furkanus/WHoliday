@@ -11,6 +11,7 @@ import Combine
 final class ServiceClient : ServiceClientProtocol , ObservableObject {
     
     @Published private var holidays : [Holiday] = []
+    private let locationManager = LocationManager()
     
     func getData(year : String? , countryCode : String?, completion: @escaping (Result<([Holiday]), HolidayError>) -> Void) {
         
@@ -19,7 +20,6 @@ final class ServiceClient : ServiceClientProtocol , ObservableObject {
             return
         }
         
-        print(url)
         
         let session = URLSession(configuration: .default)
         
@@ -47,11 +47,11 @@ final class ServiceClient : ServiceClientProtocol , ObservableObject {
                 let datas = try JSONDecoder().decode([Holiday].self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(datas))
-                    
                 }
                 
             } catch {
                 completion(.failure(.decodingError))
+                session.invalidateAndCancel()
             }
         }
         

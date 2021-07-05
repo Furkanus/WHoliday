@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704CF2AA26932DCD00A2C158 /* OvalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704CF2A926932DCD00A2C158 /* OvalButton.swift */; };
+		704CF2AC26932E2600A2C158 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704CF2AB26932E2600A2C158 /* CustomTextField.swift */; };
 		70950B06269065EB007106D6 /* WHolidayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70950B05269065EB007106D6 /* WHolidayApp.swift */; };
 		70950B08269065EB007106D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70950B07269065EB007106D6 /* ContentView.swift */; };
 		70950B0A269065EC007106D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70950B09269065EC007106D6 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		704CF2A926932DCD00A2C158 /* OvalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalButton.swift; sourceTree = "<group>"; };
+		704CF2AB26932E2600A2C158 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		70950B02269065EB007106D6 /* WHoliday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHoliday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70950B05269065EB007106D6 /* WHolidayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHolidayApp.swift; sourceTree = "<group>"; };
 		70950B07269065EB007106D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		704CF2A826932DBB00A2C158 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				704CF2A926932DCD00A2C158 /* OvalButton.swift */,
+				704CF2AB26932E2600A2C158 /* CustomTextField.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
 		70950AF9269065EB007106D6 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +83,7 @@
 		70950B04269065EB007106D6 /* WHoliday */ = {
 			isa = PBXGroup;
 			children = (
+				704CF2A826932DBB00A2C158 /* CustomElements */,
 				70D00D2D2691C5110094FDB3 /* Support */,
 				70D00D232691C2270094FDB3 /* Protocols */,
 				70D00D1C2691BFD30094FDB3 /* Network */,
@@ -253,11 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704CF2AC26932E2600A2C158 /* CustomTextField.swift in Sources */,
 				70950B08269065EB007106D6 /* ContentView.swift in Sources */,
 				70D00D1A2691BE4C0094FDB3 /* Color+Ext.swift in Sources */,
 				70D00D282691C2570094FDB3 /* Holiday.swift in Sources */,
 				70D00D1F2691BFEF0094FDB3 /* HttpMethod.swift in Sources */,
 				70950B18269068D8007106D6 /* LocationService.swift in Sources */,
+				704CF2AA26932DCD00A2C158 /* OvalButton.swift in Sources */,
 				70D00D312691CC3C0094FDB3 /* HTTPStatus.swift in Sources */,
 				70D00D2F2691C51B0094FDB3 /* Constants.swift in Sources */,
 				70950B06269065EB007106D6 /* WHolidayApp.swift in Sources */,
