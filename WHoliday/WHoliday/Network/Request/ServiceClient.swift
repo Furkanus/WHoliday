@@ -10,6 +10,8 @@ import Combine
 
 final class ServiceClient : ServiceClientProtocol , ObservableObject {
     
+  static let shared = ServiceClient()
+    
     @Published private var holidays : [Holiday] = []
     private let locationManager = LocationManager()
     
