@@ -15,9 +15,9 @@ class LocationManager  {
         
     }
     
-    func getCountryInfo() -> Locale {
-        let countryCode = Locale.current
-        return countryCode
+    func getCountryInfo() -> String {
+        let preferredLanguage = Locale.preferredLanguages[1].prefix(2)
+        return String(preferredLanguage)
     }
     
     func countryFlag(countryCode: String ) -> String {

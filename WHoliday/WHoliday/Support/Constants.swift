@@ -25,6 +25,7 @@ struct Constants {
             static let oops = "Oops"
             static let wrong = "Wrong Value!"
             static let noResultsFound = "No results found"
+            static let occured = "An error occured please try again!"
             static let cannotEmpty = "Your value cannot be empty!"
         }
     }
