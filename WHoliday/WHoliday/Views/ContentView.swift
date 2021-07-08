@@ -71,11 +71,17 @@ struct ContentView: View {
                         List(dat , id: \.self) { holiday in
                             HStack(spacing : 10) {
                                 Text(holiday.localName)
+                                    .font(.system(size: 17))
+                                
+                                
+                                Text(holiday.date)
+                                    .font(.system(size: 15))
                             }
-                        }
+                        }.frame(width: UIScreen.main.bounds.size.width / 1.1)
+                        .cornerRadius(15)
                        
                     }.padding(.top , 60)
-                    .frame(height: UIScreen.main.bounds.width / 1.2)
+                    .frame(height: UIScreen.main.bounds.width / 1.3)
                 }
                 
             }
@@ -84,7 +90,7 @@ struct ContentView: View {
             
         }.onAppear {
             DispatchQueue.main.async {
-                getData.getData(year: "2021", countryCode: "\(LocationManager.shared.getCountryInfo())" ) { result  in
+                getData.getData(year: "\(DateService.shared.getCurrentYear())", countryCode: "\(LocationManager.shared.getCountryInfo().uppercased())" ) { result  in
                     switch result {
                     case .success(let holiday):
                         DispatchQueue.main.async {
@@ -97,7 +103,9 @@ struct ContentView: View {
                 }
             }
             
-            print(LocationManager.shared.getCountryInfo())
+            // PRINT CURRENT YEAR AND COUNTRY INFO
+        //    print(LocationManager.shared.getCountryInfo().uppercased())
+           // print(DateService.shared.getCurrentYear())
           
         }
     }

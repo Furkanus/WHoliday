@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70106A6126975BFA0092E75E /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70106A6026975BFA0092E75E /* DateService.swift */; };
+		70106A6326975D250092E75E /* DateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70106A6226975D250092E75E /* DateServiceProtocol.swift */; };
+		70106A6526975E340092E75E /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70106A6426975E340092E75E /* LocationServiceProtocol.swift */; };
 		704CF2AA26932DCD00A2C158 /* OvalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704CF2A926932DCD00A2C158 /* OvalButton.swift */; };
 		704CF2AC26932E2600A2C158 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704CF2AB26932E2600A2C158 /* CustomTextField.swift */; };
 		70950B06269065EB007106D6 /* WHolidayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70950B05269065EB007106D6 /* WHolidayApp.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70106A6026975BFA0092E75E /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		70106A6226975D250092E75E /* DateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceProtocol.swift; sourceTree = "<group>"; };
+		70106A6426975E340092E75E /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceProtocol.swift; sourceTree = "<group>"; };
 		704CF2A926932DCD00A2C158 /* OvalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalButton.swift; sourceTree = "<group>"; };
 		704CF2AB26932E2600A2C158 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		70950B02269065EB007106D6 /* WHoliday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHoliday.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70106A5F26975BE40092E75E /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				70106A6026975BFA0092E75E /* DateService.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		704CF2A826932DBB00A2C158 /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,7 @@
 		70950B04269065EB007106D6 /* WHoliday */ = {
 			isa = PBXGroup;
 			children = (
+				70106A5F26975BE40092E75E /* Date */,
 				704CF2A826932DBB00A2C158 /* CustomElements */,
 				70D00D2D2691C5110094FDB3 /* Support */,
 				70D00D232691C2270094FDB3 /* Protocols */,
@@ -170,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				70D00D242691C2400094FDB3 /* ServiceProtocol.swift */,
+				70106A6226975D250092E75E /* DateServiceProtocol.swift */,
+				70106A6426975E340092E75E /* LocationServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -271,8 +288,11 @@
 				70950B08269065EB007106D6 /* ContentView.swift in Sources */,
 				70D00D1A2691BE4C0094FDB3 /* Color+Ext.swift in Sources */,
 				70D00D282691C2570094FDB3 /* Holiday.swift in Sources */,
+				70106A6526975E340092E75E /* LocationServiceProtocol.swift in Sources */,
 				70D00D1F2691BFEF0094FDB3 /* HttpMethod.swift in Sources */,
+				70106A6126975BFA0092E75E /* DateService.swift in Sources */,
 				70950B18269068D8007106D6 /* LocationService.swift in Sources */,
+				70106A6326975D250092E75E /* DateServiceProtocol.swift in Sources */,
 				704CF2AA26932DCD00A2C158 /* OvalButton.swift in Sources */,
 				70D00D312691CC3C0094FDB3 /* HTTPStatus.swift in Sources */,
 				70D00D2F2691C51B0094FDB3 /* Constants.swift in Sources */,

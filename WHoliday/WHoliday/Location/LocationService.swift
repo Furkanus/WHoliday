@@ -8,7 +8,7 @@
 
 import CoreLocation
 
-class LocationManager  {
+class LocationManager :  LocationServiceProtocol  {
     static let shared = LocationManager()
     
     init() {
@@ -20,7 +20,7 @@ class LocationManager  {
         return String(preferredLanguage)
     }
     
-    func countryFlag(countryCode: String ) -> String {
+    func getCountryFlag(countryCode: String ) -> String {
       return String(String.UnicodeScalarView(
          countryCode.unicodeScalars.compactMap(
            { UnicodeScalar(127397 + $0.value) })))
