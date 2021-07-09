@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Holiday : Codable  , Hashable {
+struct Holiday : Codable , Hashable {
     let date : String
     let localName : String
     let name : String

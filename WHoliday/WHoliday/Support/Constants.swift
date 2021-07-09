@@ -29,6 +29,12 @@ struct Constants {
             static let cannotEmpty = "Your value cannot be empty!"
         }
     }
+    
+    struct Style {
+        enum Image {
+            static let map = "map"
+        }
+    }
   
     
 

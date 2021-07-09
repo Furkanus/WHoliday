@@ -11,8 +11,7 @@ import Combine
 final class ServiceClient : ServiceClientProtocol , ObservableObject {
     
   static let shared = ServiceClient()
-    
-    @Published private var holidays : [Holiday] = []
+        @Published var holidays : [Holiday] = []
     private let locationManager = LocationManager()
     
     func getData(year : String? , countryCode : String?, completion: @escaping (Result<([Holiday]), HolidayError>) -> Void) {
