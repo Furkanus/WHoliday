@@ -8,6 +8,10 @@
 import Foundation
 
 
-protocol DateServiceProtocol {
+protocol CurrentYearService {
     func getCurrentYear() -> Int
+}
+
+protocol CurrentDateService {
+    func getCurrentDate() -> String
 }

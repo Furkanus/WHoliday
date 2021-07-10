@@ -8,7 +8,6 @@
 import Foundation
 
 
-@objc protocol LocationServiceProtocol {
+ protocol LocationServiceProtocol {
     func getCountryInfo() -> String
-    @objc optional func getCountryFlag(countryCode : String) -> String
 }

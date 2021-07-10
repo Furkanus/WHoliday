@@ -54,7 +54,6 @@ struct ContentView: View {
                             
                             
                             
-                            
                         }.alert(isPresented: $showAlert, content: {
                             return Alert(title: Text(Constants.Texts.Error.oops) , message: Text(Constants.Texts.Error.occured) , dismissButton: .default(Text(Constants.Texts.Error.ok)))
                         })
@@ -72,12 +71,15 @@ struct ContentView: View {
                             
                             List(dat , id: \.self) { holiday in
                                 HStack(spacing : 10) {
-                                    Text(holiday.localName)
-                                        .font(.system(size: 17))
-                                    
-                                    
-                                    Text(holiday.date)
-                                        .font(.system(size: 15))
+                                    NavigationLink(destination: HolidayDetailView(holidays: holiday)) {
+                                        Text(holiday.localName)
+                                            .font(.system(size: 17))
+                                        
+                                        
+                                        Text(holiday.date)
+                                            .font(.system(size: 15))
+                                    }
+                                 
                                 }
                             }.frame(width: UIScreen.main.bounds.size.width / 1.1)
                             .cornerRadius(15)

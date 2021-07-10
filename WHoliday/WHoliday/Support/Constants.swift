@@ -17,7 +17,10 @@ struct Constants {
         static let enterYear = "Enter Year Here!"
         static let fetch = "Fetch"
         static let enterCountry = "Enter country code here!"
-
+        static let infos = "Holiday Infos"
+        static let localName = "Local Name:"
+        static let name = "Name:"
+        static let date = "Date:"
         
         
         enum Error {

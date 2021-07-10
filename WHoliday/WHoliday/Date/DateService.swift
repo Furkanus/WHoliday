@@ -8,9 +8,16 @@
 import Foundation
 
 
-class DateService : DateServiceProtocol  {
-    
+class DateService : CurrentYearService , CurrentDateService  {
     static let shared = DateService()
+
+    
+    func getCurrentDate() -> String {
+        let timestamp = DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .short)
+        return timestamp
+    }
+    
+    
     
     init() {
         
@@ -20,4 +27,5 @@ class DateService : DateServiceProtocol  {
         let year = Calendar.current.component(.year, from: Date())
         return year
     }
+    
 }
