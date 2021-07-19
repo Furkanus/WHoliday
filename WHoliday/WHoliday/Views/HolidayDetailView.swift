@@ -21,6 +21,7 @@ struct HolidayDetailView: View {
                             Text(Constants.Texts.date + " " + holidays.date)
                             Text(Constants.Texts.name + " " + holidays.name)
                             
+                            
                         }
                     }
                     Spacer()
