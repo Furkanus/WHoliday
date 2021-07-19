@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-
 struct HolidayDetailView: View {
     internal let holidays : Holiday!
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.bg2, Color.bg1]), startPoint: .topLeading, endPoint: .bottomTrailing)
