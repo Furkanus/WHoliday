@@ -7,7 +7,7 @@
 
 import Foundation
 
-
  protocol LocationServiceProtocol {
     func getCountryInfo() -> String
 }
+
